@@ -18,6 +18,12 @@ describe GildedRose do
                 GildedRose.new(items).update_quality()
                 expect(items[0].sell_in).to eq (4)
             end
+
+            it "item has quality value which decreases each day" do
+                items = [Item.new("item", 10, 10)]
+                GildedRose.new(items).update_quality()
+                expect(items[0].quality).to eq (9)
+            end
         end
     end
 end
