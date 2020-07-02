@@ -18,6 +18,6 @@ describe GildedRose do
                 GildedRose.new(items).update_quality()
                 expect(items[0].sell_in).to eq (4)
             end
-        end    
+        end
     end
 end
